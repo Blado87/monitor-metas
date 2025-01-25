@@ -3,6 +3,8 @@
   --azul: #2b7fff;
   --naranja: #ff6900;
   --amarillo: #f0b100;
+  --amarillo-200: #fff085;
+  --amarillo-50: #fefce8;
   --verde: #00c951;
   --morado: #ad46ff;
   --gris: #737373;
@@ -10,9 +12,13 @@
   --gris-100: #f3f4f6;
   --negro: #000000;
   --blanco: #ffffff;
+  --slate-800: #364153;
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
   background-color: var(--gris-100);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -22,12 +28,43 @@ body {
   padding: 0;
 }
 
+a {
+  text-decoration: none; /* Elimina el subrayado */
+  color: inherit;        /* Usa el color del elemento padre */
+}
+
+a:visited {
+  color: inherit;        /* Opcional, para evitar el color predeterminado de enlaces visitados */
+}
+
+a:hover,
+a:focus {
+  text-decoration: none; /* Asegúrate de mantener el estilo limpio al pasar el cursor o enfocar */
+}
+
+a:active {
+  color: inherit;        /* Asegura que el color no cambie al hacer clic */
+}
+
+.main-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .navbar {
-  background-color: #2c3e50;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: var(--slate-800);
   color: #ffffff;
-  padding: 10px 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
   display: flex;
   align-items: center;
+  width: 100%;
   margin-bottom: 30px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -38,17 +75,34 @@ body {
   gap: 10px;
 }
 
+.navbar-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
 .navbar-icon {
-  font-size: 24px;
+  font-size: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 5px;
+  border: 1px solid var(--slate-800);  
 }
 
-.navbar-title {
-  font-size: 18px;
-  font-weight: bold;
-  margin: 0;
+.navbar-icon:hover {
+  padding: 5px;
+  border: 1px solid var(--amarillo);
+  color: var(--amarillo-200);
+  border-radius: 8px;
+}
+
+.navbar-icon:active {
+  padding: 5px;
+  border: 1px solid var(--amarillo);
+  color: var(--amarillo-200);
+  border-radius: 8px;
+  background-color: var(--amarillo);
 }
 
 .button {  
@@ -60,7 +114,6 @@ body {
   padding: 10px 20px;
   border-radius: 4px;
   cursor: pointer;
-  width: 100%;
   transition: all 0.3s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -149,8 +202,8 @@ body {
 .footer {
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-top: 20px;
+  justify-content: space-between;
+  margin-top: 30px;
   gap: 8px;
 }
 
@@ -170,4 +223,12 @@ body {
 
 .percentage-change.negative {
   color: #ff3b3b;
+}
+
+.responsable{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
 }
