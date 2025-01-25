@@ -3,23 +3,28 @@
   --azul: #2b7fff;
   --naranja: #ff6900;
   --amarillo: #f0b100;
-  --amarillo-200: #fff085;
-  --amarillo-50: #fefce8;
   --verde: #00c951;
   --morado: #ad46ff;
-  --gris: #737373;
-  --gris-700: #404040;
-  --gris-100: #f3f4f6;
   --negro: #000000;
+  --gris: #ADB5BD;
   --blanco: #ffffff;
-  --slate-800: #364153;
+  --lima: #7CCF00;
+  --esmeralda: #00BC7D;
+  --te: #00BBA7;
+  --cyan: #0092B8;
+  --indigo: #615FFF;
+  --violeta: #7F22FE;
+  --fuchsia: #C800DE;
+  --pink: #C800DE;
+
+  --gris-oscuro: #495057;
+  --gris-claro: #E9ECEF;
 }
 
 body {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  background-color: var(--gris-100);
+  background-color: #EAEAEC;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -28,82 +33,12 @@ body {
   padding: 0;
 }
 
-a {
-  text-decoration: none; /* Elimina el subrayado */
-  color: inherit;        /* Usa el color del elemento padre */
-}
-
-a:visited {
-  color: inherit;        /* Opcional, para evitar el color predeterminado de enlaces visitados */
-}
-
-a:hover,
-a:focus {
-  text-decoration: none; /* Asegúrate de mantener el estilo limpio al pasar el cursor o enfocar */
-}
-
-a:active {
-  color: inherit;        /* Asegura que el color no cambie al hacer clic */
-}
-
 .main-container{
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.navbar {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  background-color: var(--slate-800);
-  color: #ffffff;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-left: 30px;
-  padding-right: 30px;
-  display: flex;
-  align-items: center;
-  width: 100%;
-  margin-bottom: 30px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.navbar-container {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.navbar-title {
-  font-size: 20px;
-  font-weight: bold;
-  margin: 0;
-}
-
-.navbar-icon {
-  font-size: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 5px;
-  border: 1px solid var(--slate-800);  
-}
-
-.navbar-icon:hover {
-  padding: 5px;
-  border: 1px solid var(--amarillo);
-  color: var(--amarillo-200);
-  border-radius: 8px;
-}
-
-.navbar-icon:active {
-  padding: 5px;
-  border: 1px solid var(--amarillo);
-  color: var(--amarillo-200);
-  border-radius: 8px;
-  background-color: var(--amarillo);
-}
 
 .button {  
   font-size: 14px;
@@ -114,6 +49,7 @@ a:active {
   padding: 10px 20px;
   border-radius: 4px;
   cursor: pointer;
+  width: 100%;
   transition: all 0.3s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -140,16 +76,16 @@ a:active {
   text-align: center;
 }
 
-.date {
-  color: var(--gris-700);
+.card__ico {
+  color: var(--gris-oscuro);
   margin-bottom: 8px;
 }
 
 .title {
   font-size: 16px;
   font-weight: bold;
-  margin-bottom: 16px;
-  color: var(--gris-700);
+  color: var(--gris-oscuro);
+  margin-bottom: 20px;
 }
 
 .percentage {
@@ -160,14 +96,14 @@ a:active {
 }
 
 .container-data{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  font-size: small;
-  font-weight: bold;
+  font-size: smaller;
   color: var(--gris);
   width:100%;
-  margin-top: 16px;
+  padding: 10px;
+}
+
+.container-data p{
+  margin: 0;
 }
 
 .progress-container {
@@ -177,17 +113,11 @@ a:active {
   margin-top: 6px;
 }
 
-.current-value,
-.target-value {
-  font-size: 14px;
-  color: #333333;
-}
-
 .progress-bar {
   position: relative;
   flex-grow: 1;
   height: 8px;
-  background: #e0e0e0;
+  background: var(--gris-claro);
   border-radius: 10px;
   margin: 0 8px;
   overflow: hidden;
@@ -202,14 +132,8 @@ a:active {
 .footer {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin-top: 30px;
+  margin-top: 20px;
   gap: 8px;
-}
-
-.icon {
-  font-size: 20px;
-  color: #ff5722;
 }
 
 .percentage-change {
@@ -223,12 +147,4 @@ a:active {
 
 .percentage-change.negative {
   color: #ff3b3b;
-}
-
-.responsable{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  font-size: 15px;
 }
