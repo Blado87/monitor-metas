@@ -1,18 +1,19 @@
 const metas = [
   {
-    area: "Competencias",
+    area: "certificacion de competencias laborales",
     lider: "Juan Pérez",
     foto: "./img/juan.jpg",
+    icono:"",
     color: "",
     meta: 1000,
-    avanceTotal: 600,
-    avanceMensual: [100, 120, 80, 150, 90, 60]
+    avanceMensual: [30, 0, 0, 0, 0, 0],
   },
   {
-    area: "Empleo",
+    area: "agencia publica de empleo",
     lider: "María Gómez",
     foto: "./img/maria.jpg",
     color: "",
+    icono: "",
     meta: 800,
     avanceTotal: 500,
     avanceMensual: [80, 100, 120, 70, 60, 70]

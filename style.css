@@ -16,6 +16,7 @@
   --violeta: #7F22FE;
   --fuchsia: #C800DE;
   --pink: #C800DE;
+  --slate: #1D293D;
 
   --gris-oscuro: #495057;
   --gris-claro: #E9ECEF;
@@ -31,6 +32,50 @@ body {
 *{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+  color: inherit; 
+}
+
+.navbar {
+  display: flex; 
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--slate); 
+  color: white;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  height: 50px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.navbar-title{
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-link {
+  display: inline-flex; 
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px; 
+  background-color: var(--blanco); 
+  border-radius: 4px; 
+  transition: all 0.3s ease;
+  cursor: pointer;
+  color: var(--slate);
+  font-size: 16px; 
+}
+
+.navbar-link:hover {
+  background-color: var(--gris-claro);
 }
 
 .main-container{
@@ -39,8 +84,75 @@ body {
   align-items: center;
 }
 
+.card{
+  padding: 10px;
+  width: 95%;
+  background-color: var(--blanco);
+}
 
-.button {  
+.card-title{
+  margin-bottom: 20px;
+  font-weight: bold;  
+}
+.card-data{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.card-data-items{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+
+/* grafica */
+.doughnut-chart {
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
+
+.doughnut-chart .circle {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: conic-gradient(
+    #4CAF50 0% 70%,   /* Color del segmento (70% completo) */
+    #e0e0e0 70% 100% /* Color de fondo restante */
+  );
+}
+
+.doughnut-chart .inner-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* .button {  
   font-size: 14px;
   font-weight: 400;
   color: var(--blanco);
@@ -147,4 +259,4 @@ body {
 
 .percentage-change.negative {
   color: #ff3b3b;
-}
+} */
