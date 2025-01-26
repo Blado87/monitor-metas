@@ -92,6 +92,7 @@ a{
   padding: 10px;
   width: 90%;
   background-color: var(--blanco);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .card-title{
@@ -116,8 +117,8 @@ a{
 /* grafica */
 .doughnut-chart {
   position: relative;
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
 }
 
 .doughnut-chart .circle {
@@ -134,26 +135,44 @@ a{
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
   transform: translate(-50%, -50%);
   border-radius: 50%;
   background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #333;
+  color: var(--lima);
   font-size: 18px;
   font-weight: bold;
 }
 
-.card-buton{
-  color: var(--blanco);
-  font-size: 18px;
+/* Estilo para el botón con clase 'boton-card' */
+.boton-card {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: var(--lima); /* Color principal del botón */
+  text-decoration: none;
   text-align: center;
-  padding: 10px 20px;
-  font-weight: bold;
-  background-color: var(--lima);
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, box-shadow 0.3s;
+  width: 100%;
+}
+
+.boton-card:hover {
+  background-color: #45a049; /* Color al pasar el mouse */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.boton-card:active {
+  background-color: #3e8e41; /* Color al hacer clic */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transform: translateY(2px); /* Efecto de pulsación */
 }
 
 
@@ -174,17 +193,6 @@ a{
     background-color: var(--blanco);
   }
 
-  .doughnut-chart {
-    width: 100px; /* Reduce el tamaño total */
-    height: 100px;
-  }
-
-  .doughnut-chart .inner-circle {
-    width: 70px; /* Reduce el círculo interior */
-    height: 70px;
-    font-size: 14px; /* Ajusta el tamaño del texto */
-  }
-
   .card-buton{
     font-size: 16px;
     text-align: center;
@@ -194,117 +202,3 @@ a{
   }
 
 }
-
-
-
-
-
-
-/* .button {  
-  font-size: 14px;
-  font-weight: 400;
-  color: var(--blanco);
-  background-color: var(--verde);
-  border: 2px solid var(--verde);
-  padding: 10px 20px;
-  border-radius: 4px;
-  cursor: pointer;
-  width: 100%;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.button:hover {
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-  transform: translateY(-2px);
-}
-
-.button:active {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  transform: translateY(0);
-}
-
-.card {
-  background: #ffffff;
-  border-radius: 4px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 10px;
-  padding-bottom: 25px;
-  width: 300px;
-  text-align: center;
-}
-
-.card__ico {
-  color: var(--gris-oscuro);
-  margin-bottom: 8px;
-}
-
-.title {
-  font-size: 16px;
-  font-weight: bold;
-  color: var(--gris-oscuro);
-  margin-bottom: 20px;
-}
-
-.percentage {
-  font-size: 36px;
-  color: var(--verde);
-  font-weight: bold;
-  margin: 0;
-}
-
-.container-data{
-  font-size: smaller;
-  color: var(--gris);
-  width:100%;
-  padding: 10px;
-}
-
-.container-data p{
-  margin: 0;
-}
-
-.progress-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 6px;
-}
-
-.progress-bar {
-  position: relative;
-  flex-grow: 1;
-  height: 8px;
-  background: var(--gris-claro);
-  border-radius: 10px;
-  margin: 0 8px;
-  overflow: hidden;
-}
-
-.progress {
-  width: 81%;
-  height: 100%;
-  background: var(--verde);
-}
-
-.footer {
-  display: flex;
-  align-items: center;
-  margin-top: 20px;
-  gap: 8px;
-}
-
-.percentage-change {
-  font-size: 14px;
-  font-weight: bold;
-}
-
-.percentage-change.positive {
-  color: #00b359;
-}
-
-.percentage-change.negative {
-  color: #ff3b3b;
-} */
