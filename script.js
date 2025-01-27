@@ -27,9 +27,39 @@ const metas = [
     meta: 1500,
     avanceTotal: 900,
     avanceMensual: [200, 180, 170, 150, 100, 100]
+  },
+  {
+    area: "Formación",
+    lider: "Carlos",
+    foto: "./img/carlos.jpg",
+    color: "#00BBA7",
+    icono: '<i class="bi bi-pencil-fill"></i>',
+    meta: 1500,
+    avanceTotal: 900,
+    avanceMensual: [85, 180, 170, 130, 100, 100]
   }
 ];
 
+
+const atenciones = [
+  {
+    area: "empresas",
+    lider: "Juan Pérez",
+    foto: "./img/juan.jpg",
+    icono:'<i class="bi bi-building-fill"></i>',
+    color: "#00BBA7",
+    avanceMensual: [30, 20, 0, 0, 0, 0],
+  },
+  {
+    area: "usuarios",
+    lider: "María",
+    foto: "./img/maria.jpg",
+    color: "#f0b100",
+    icono: '<i class="bi bi-headset"></i>',
+    avanceTotal: 500,
+    avanceMensual: [80, 50, 0, 0, 0, 0]
+  },
+];
 
 function crearCards(metas) {
   const container = document.getElementById("container-card");
@@ -82,3 +112,4 @@ function crearCards(metas) {
 
 // Llamar a la función para crear las cards
 crearCards(metas);
+

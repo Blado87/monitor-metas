@@ -115,8 +115,8 @@ a{
   justify-content: space-evenly;
 }
 
-/* grafica */
-.doughnut-chart {
+ /* grafica */
+ .doughnut-chart {
   position: relative;
   width: 100px;
   height: 100px;
@@ -175,7 +175,6 @@ a{
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   transform: translateY(2px); /* Efecto de pulsación */
 }
-
 
 @media (min-width: 1024px) {
   .main-card{
